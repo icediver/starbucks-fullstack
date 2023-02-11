@@ -1,0 +1,10 @@
+.nav {
+	@apply text-right;
+	> a {
+		@apply mr-2 opacity-40 transition-opacity duration-300 ;
+		
+		&:hover {
+			@apply opacity-100;
+		}
+	}
+}

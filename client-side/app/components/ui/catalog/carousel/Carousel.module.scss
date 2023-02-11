@@ -1,0 +1,73 @@
+@import "app/assets/styles/variables";
+
+.carousel {
+	@apply mt-28 grid grid-cols-4 gap-8;
+}
+
+.item {
+	@apply relative mb-8 cursor-pointer rounded-3xl p-5 pt-0 bg-light-gray;
+	
+	
+	.heading {
+		@apply block text-left text-xl font-bold leading-7 text-beige;
+		max-height: 2.4em;
+		
+		
+		> span {
+			
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+	}
+	
+	.description {
+		
+		@apply mt-4 text-sm opacity-90 text-beige animate-opacity;
+	}
+	
+	> div {
+		@apply relative;
+	}
+	
+	
+	.link {
+		@apply mt-2.5 block  text-center text-xs text-white;
+	}
+	
+	&.active {
+		@apply shadow-2xl shadow-green bg-green p-7 pt-0 bg-contain h-[600];
+		//		transform: scale(1.12);
+		background-image: url('/images/bg-pattern.jpg');
+		background-position: bottom;
+		//		background-size: 110%;
+		
+		&::before {
+			@apply absolute top-0 left-0 h-full w-full rounded-3xl;
+			content: '';
+			background-image: linear-gradient(0deg, #356535 39%, rgba(255, 255, 255, 0.4) 100%);
+		}
+		
+		.heading {
+			@apply text-3xl leading-9 text-white;
+		}
+	}
+}
+
+.variations {
+	@apply mt-6 grid grid-cols-4 gap-2.5 animate-opacity;
+	
+	&.medium {
+		> button {
+			@apply text-[0.8rem]
+		}
+	}
+	
+	> button {
+		@apply transition-colors text-[0.6rem] font-semibold uppercase px-0.5  text-center border border-solid border-white bg-transparent text-white mt-5 rounded;
+		&.active {
+			@apply bg-white text-dark-green;
+		}
+	}
+}

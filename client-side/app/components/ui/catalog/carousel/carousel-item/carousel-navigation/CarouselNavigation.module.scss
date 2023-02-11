@@ -1,0 +1,20 @@
+.navigation {
+	@apply relative;
+	.image {
+		@apply -mt-[4.5rem]  block;
+		> img {
+			@apply pointer-events-none;
+		}
+	}
+	
+	.arrows {
+		@apply flex items-center absolute w-full justify-between left-0 animate-scaleIn;
+		top: 45%;
+		width: 110%;
+		left: -5%;
+		
+		.arrow {
+			@apply text-white  ;
+		}
+	}
+}

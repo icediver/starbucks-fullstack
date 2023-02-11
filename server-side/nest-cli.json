@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "generateOptions": {
+    "spec": false
+  },
+  "projects": {
+    "yookassa": {
+      "type": "library",
+      "root": "libs/yookassa",
+      "entryFile": "index",
+      "sourceRoot": "libs/yookassa/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/yookassa/tsconfig.lib.json"
+      }
+    }
+  },
+  "compilerOptions": {
+    "webpack": true
+  }
+}
