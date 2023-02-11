@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
 					</ChakraProvider>
 				</PersistGate>
 			</Provider>
-			<ReactQueryDevtools| initialIsOpen={false} />
+			<ReactQueryDevtools initialIsOpen={false} />
 			
 			
 		</QueryClientProvider>
